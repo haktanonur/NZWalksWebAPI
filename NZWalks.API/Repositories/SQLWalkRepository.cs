@@ -22,7 +22,7 @@ namespace NZWalks.API.Repositories
         }
 
         public async Task<List<Walk>> GetAllAsync(string? filterOn = null, string? filterQuery = null,
-            string? sortBy = null, bool isAscending = true)
+            string? sortBy = null, bool isAscending = true, int pageNumber = 1, int pageSize = 1000)
         {
             var walks = dbContext.Walks.Include("Difficulty").Include("Region").AsQueryable();
 
@@ -48,7 +48,13 @@ namespace NZWalks.API.Repositories
                 }
             }
 
-            return await walks.ToListAsync();
+            //  Pagination
+            //  Belirtilen sayfanın başlangıcını belirlemek için hesaplama yapar.
+            //  Önceki sayfalardaki öğeleri atlar ve istenen sayfa numarasına göre doğru konuma geçer.
+            //  Skip() ile belirtilen sayıda öğe atlanır ve Take() ile istenen sayıda öğe alınır. 
+            var skipResults = (pageNumber - 1) * pageSize;
+
+            return await walks.Skip(skipResults).Take(pageSize).ToListAsync();
 
             // return await dbContext.Walks.Include("Difficulty").Include("Region").ToListAsync();
         }

@@ -3,25 +3,25 @@
 Using the ASP .NET Core Web API, I created a very interesting REST API that includes the regions and walks of New Zealand
 
 ## Achievements
-- Understand REST APIs by creating a Web API using ASP.NET Core and .NET 7
+-  REST APIs by creating a Web API using ASP.NET Core and .NET 7
 
-- Understand Dependency Injection and Benefits
+- Dependency Injection and Benefits
 
-- Learn And Install Entity Framework Core (EF Core) In ASP.NET Core Web API Project
+- Entity Framework Core (EF Core) In ASP.NET Core Web API Project
 
-- Learn Entity Framework Core Migrations
+- Entity Framework Core Migrations
 
 - Understand the difference between Domain models and DTOs
 
-- Understand Domain Models and Repository Pattern
+- Domain Models and Repository Pattern
 
 - Use Swagger To Test ASP .NET Core WEB API project
 
-- Learn How To Map Models To One Another Using Automapper
+- How To Map Models To One Another Using Automapper
 
-- Learn Asynchronous Programming (Async Await)
+- Asynchronous Programming (Async Await)
 
-- Learn Logging In ASP.NET Core Web API Project
+- Logging In ASP.NET Core Web API Project
 
 - Secure your ASP.NET Core Web API using Microsoft Identity by adding Authentication and Role-Based Authorization to your REST API.
 
